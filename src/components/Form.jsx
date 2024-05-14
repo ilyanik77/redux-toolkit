@@ -21,17 +21,13 @@ const Form = () => {
 	return (
 		<form
 			className='w-full flex'
-			onSubmit={e => {
-				e.preventDefault()
-			}}
+			onSubmit={e => e.preventDefault()}
 		>
 			<input
 				type='text'
 				value={todoValue}
 				placeholder='Type Something ...'
-				onChange={e => {
-					setTodoValue(e.target.value)
-				}}
+				onChange={e => setTodoValue(e.target.value)}
 				className='w-full p-1 focus:outline-none focus:border-lime-500 focus: border-2 placeholder:text-sm'
 			/>
 			<button
